@@ -1,0 +1,19 @@
+@import "./global";
+
+// Window content
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        font-size: 32pt;
+        text-align: center;
+    }
+
+    p {
+        font-size: 16pt;
+        text-align: center;
+    }
+}
