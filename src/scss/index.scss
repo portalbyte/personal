@@ -1,19 +1,42 @@
-@import "./global";
+// Measurements
+$w_window: 800px;
+$h_window: 600px;
 
-// Window content
-.content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+// Colors
+$c_win95-cyan: #008080;
+$c_window-background: #cccccc;
+$c_window-border: #454545;
 
-    h1 {
-        font-size: 32pt;
-        text-align: center;
-    }
+// Global
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
-    p {
-        font-size: 16pt;
-        text-align: center;
-    }
+// Window Wrapper
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    padding: 32px 256px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    //align-items: center;
+    overflow: hidden;
+
+    background-color: $c_win95-cyan;
+}
+
+// Windows
+.main-window,
+.blog-window {
+    width: 90%;
+    height: fit-content;
+}
+
+// Buttons
+button {
+    cursor: pointer;
 }

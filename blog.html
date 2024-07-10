@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>portalbyte - blogposts</title>
+        <link rel="shortcut icon" href="/src/img/favicon.ico" type="image/x-icon">
+
+        <link rel="stylesheet" href="./src/css/index.min.css">
+
+        <!-- Link to Mastodon -->
+        <link href="https://tech.lgbt/@portalbyte" rel="me">
+
+        <!-- Windows 98 UI -->
+         <link rel="stylesheet" href="https://unpkg.com/98.css">
+    </head>
+    <body>
+
+        <div class="wrapper">
+
+            <!-- Main Window -->
+            <div class="window main-window">
+
+                <!-- Title Bar -->
+                <div class="title-bar">
+
+                    <div class="title-bar-text">
+                        portalbyte - blogposts
+                    </div>
+
+                    <div class="title-bar-controls">
+                        <button aria-label="Help" onclick="redirect()" />
+                        <button aria-label="Close" />
+                    </div>
+                </div>
+
+                <!-- Body -->
+                <div class="window-body">
+                    
+                    <!-- Window Tabs -->
+                    <menu role="tablist">
+                        <li role="tab"><a href="/index.html">Home</a></li>
+                        <li role="tab"><a href="/projects.html">Projects</a></li>
+                        <li role="tab" aria-selected="true"><a href="/blog.html">Blogposts</a></li>
+                        <li role="tab"><a href="/about.html">About</a></li>
+                    </menu>
+
+                    <!-- Window Text-->
+                    <div class="window" role="tabpanel">
+
+                        <div class="window-body">
+
+                            <p>Here is a collection of all my blogposts covering a variety of different topics.</p>
+                            <br>
+
+                            <!-- Blog Posts Table-->
+                            <div class="sunken-panel">
+
+                                <table class="interactive" style="width: 100%;">
+
+                                    <!-- Table Headers-->
+                                    <thead>
+                                        <tr>
+
+                                            <th style="width: 5%">No.</th>
+                                            <th style="width: 60%;">Blog Name</th>
+                                            <th style="width: 15%;">Date Published</th>
+                                            <th style="width: 25%;">Topics</th>
+
+                                        </tr>
+                                    </thead>
+
+                                    <!-- Dummy Blog Post -->
+                                    <tbody>
+                                        <tr id="blog-000">
+
+                                            <td>0</td>
+                                            <td>Welcome to the blog :3</td>
+                                            <td>2024-07-10</td>
+                                            <td>meta</td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog Logic -->
+        <script src="./src/js/blog.js" type="module"></script>
+
+        <script>
+
+            function closeWindow() {
+
+                document.getElementsByClassName("blog-window")[0].parentNode.removeChild(document.getElementsByClassName("blog-window")[0])
+
+                document.getElementsByClassName("title-bar")[0].classList.remove("inactive")
+            }
+
+        </script>
+
+        <!-- Help Button Logic-->
+        <script>
+            function redirect() { window.location.href = "https://git.portalbyte.dev/portalbyte/personal" }
+        </script>
+    </body>
+</html>
